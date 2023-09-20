@@ -15,6 +15,7 @@ String  {cout << "STRING" << endl;}
 "+" { cout << "PLUS" << endl; }
 "-" { cout << "MINUS" << endl; }
 "*" { cout << "TIMES" << endl;}
+"/" { cout << "DIVIDE" << endl;}
 "%" { cout << "MODULUS" << endl;}
 "++" { cout << "INCREMENT" << endl;}
 "&&" { cout << "AND" << endl;}
@@ -32,6 +33,8 @@ String  {cout << "STRING" << endl;}
 ")" {cout << "RIGHT PARENTHESIS" << endl;}
 "{" {cout << "OPENING BRACE" << endl;}
 "}" {cout << "CLOSING BRACE" << endl;}
+"[" {cout << "OPENING SQUARE BRACKET" << endl;}
+"]" { cout << "CLOSING SQUARE BRACKET" << endl;}
 if      { cout << "IF" << endl; }
 then { cout << "THEN" << endl;}
 else    { cout << "ELSE" << endl; }
@@ -41,7 +44,6 @@ return { cout << "RETURN" << endl;}
 
 
 ";" { cout << "SEMICOLON" << endl;}
-[a-zA-Z_][a-zA-Z0-9_]*\[\] { cout << "ARRAY DECLARATION: " << yytext << endl; }
 [a-zA-Z_][a-zA-Z0-9_]* { cout << "IDENTIFIER: " << yytext << endl; }
 [0-9]+  { cout << "NUMBER: " << yytext << endl; }
 \"[^\"\n]*\" { cout << "STRING: " << yytext << endl; }
